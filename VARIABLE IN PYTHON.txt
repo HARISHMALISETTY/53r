@@ -1,0 +1,103 @@
+VARIABLE IN PYTHON:
+---------------------
+VARIABLE
+USE CASE OF VARIABLES
+RULES TO BE FOLLOW WHILE USING VARIABLE
+HOW THE DATA CAN BE ASSIGNED TO VARIABLE
+HOW PYTHON MANAGES MEMORY FOR VARIABLES.
+
+
+VARIABLE IS NOTHING BUT A CONTAINER TO STORE THE VALUE/INFORMATION/DATA TO PERFORM OPERATIONS, COMPUTATIONS AND REUSE THE DATA THROUGHOUT THE PROGRAM.
+
+js--->a
+a=5
+
+python--->x=4 
+
+in python we have to assign value to the variable in starting itself.
+
+x=4
+
+1.variable names should not contain emptyspace,
+2.should not starts with numbers
+3.variable names are case sensitive
+4.we cant use special characters except _
+5. we cant use keywords/reserved words as a variable name.
+
+camelCase-->firstName
+pascalcase--->FirstName
+snakecase--->frst_name
+kebabcase---->first-name
+
+x=5---->integer
+y=5.5--->float
+z="hello"---->string
+
+id()--->is used to get the id/memory address of a object
+print()--->to display the output
+type()---->is used to check and print the type of the data
+
+x=5
+x=1.2
+x="harish"
+
+
+in python, variables will changes its type based on the data automatically. so we can say python is a dynamically typed language.
+
+
+as we know, python works with high speed.by following few optimizing techniques.
+1.memory pooling--->same memory will be allocates if the value is same(-5 to 256)
+2.interning.--->same memory will be allocates if the string is small and same.
+3.garbage collection-->unused objects/values can be identified and throw into the garbage by garbage collector.
+
+
+
+these two process will follow the caching.(just remembering or keeping in mind for sometime)
+
+
+name="karthik"
+
+name="kumar"
+
+"""--->used to write multiline strings in python
+print(f"")--->formatting and printing purpose
+input()--->to take input from user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
