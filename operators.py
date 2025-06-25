@@ -123,9 +123,41 @@ a=1000
 
 b=1000
 
-print(a is b)
+# print(a is b)
 
 #identity operators are used to check id of objects.
 #is---> means both objects having same id
 #is not-->means both objects having different ids
 
+
+#and, or , not
+
+# and, or, not, xor, rightshift and leftshift
+
+# & ,|,~,^,>>,<<
+
+# 2 & 2
+
+# 0010 & 0010
+
+# print(3|5)
+
+# bitwise and(&)-->if both operands are 1 then only it gives result as 1
+# bitwise or(|)--->if any of the operand is then it gives result 1
+# bitwise xor(^)-->in two operands it will accept only one operand should be 1, 
+# otherwise it will gives zero as result
+#bitwise not(~)--->it will just inverts the operands
+#leftshift
+#rightshift
+
+# print(5^7)
+# print(3^6)
+
+# print(~5)
+
+# print(5>>2)
+# print(10>>2)
+
+# print(5<<4)
+
+# print(5<<3)
