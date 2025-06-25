@@ -45,8 +45,10 @@
 # else:
 #     print("he is outside the classroom")
 
-tickets_available=not True
-if(tickets_available):
-    print("watch the match in stadium")
-else:
-    print("watch the match in ur device")
+# tickets_available=not True
+# if(tickets_available):
+#     print("watch the match in stadium")
+# else:
+#     print("watch the match in ur device")
+
+#write a program to check eligbility of person to vote
