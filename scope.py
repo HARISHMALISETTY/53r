@@ -38,7 +38,7 @@ x="hello"
 def fun1():
     x=5
     def func2():
-    #    nonlocal x
+       nonlocal x
        x=10
     func2()
     print(x)
