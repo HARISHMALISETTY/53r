@@ -90,20 +90,44 @@ str="something"
 # **
 # *
 
-for x in range(1, 6):
-    num = 0
-    place = 1 
-    for y in range(x, 0, -1):  
-        square = y ** 2
+# for x in range(1, 6):
+#     num = 0
+#     place = 1 
+#     for y in range(x, 0, -1):  
+#         square = y ** 2
 
-        # Count digits in square
-        temp = square
-        digits = 0
-        while temp > 0:
-            temp = temp // 10
-            digits += 1
+#         # Count digits in square
+#         temp = square
+#         digits = 0
+#         while temp > 0:
+#             temp = temp // 10
+#             digits += 1
 
-        num = square * place + num
-        place = place * (10 ** digits)
+#         num = square * place + num
+#         place = place * (10 ** digits)
 
-    print(num)
+#     print(num)
+
+# list=["hello","welcome","something","hello","apple","apple"]
+
+# op={"hello":2,"apple":2,"welcome":1,"something":1}
+# dict={}
+
+
+
+# for x in list:
+#     if(x in dict):
+#         dict[x]+=1
+#     else:
+#         dict[x]=1
+# print(dict)
+
+# ex="BANANA"
+# # op={"B":1,"A":3,"N":2}
+# dict={}
+# for x in ex:
+#     if(x in dict):
+#         dict[x]+=1
+#     else:
+#         dict[x]=1
+# print(dict)
