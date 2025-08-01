@@ -1,0 +1,26 @@
+encapsulation--->grouping and security.
+for grouping we will uses classes.
+for security we have access modifiers:
+1.public
+2.protected
+3.private.
+
+only single class(no inheritance):
+----------------------------------
+1.public-->we can access those variable  in same class, through object without any restrictions.
+2.protected(_var)-->we are not suppose to access variables outside of class, but we can access which is not recommended.
+it is just to give discipline to developers while writing the code.
+3.private(__var)--->we can't and not allowed to access variables outside of the class.
+but we can hack using name mangling approach (eg:_classname__var) which is not recommended.
+
+but we can use getter and setter methods to access and to update the variables.(which is recommended).
+
+multiple classes with inheritance:
+-----------------------------------
+1.protected(_var)--->we can allowed to access the variable with in the classes which were being inherited and allowing inheritance.
+
+2.private(__var)--->as same like before in single class.
+
+
+
+
