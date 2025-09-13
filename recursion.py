@@ -50,3 +50,5 @@ for val in x:
         sum+=val
 print(sum)
 
+
+
