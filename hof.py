@@ -61,6 +61,11 @@ print(list(op1))
 #that we can convert into list or tuple/set
 #as per our requirement
 
+#filter is also a built-in higher order function which check a specfici condtion using a function for every elememnt
+#in the list/tuple/set and filter that dataset and return an object. so that we can build set/list/tuple
+#based on our requirement.
+
+
 
 
 
