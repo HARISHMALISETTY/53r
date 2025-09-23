@@ -1,5 +1,8 @@
 import mysql.connector 
 from db import info
+from getRecords import getRecords
+from getRecords import getStudentsByCourse
+from getRecords import getLimitedRecords
 
 try:
     conn=mysql.connector.connect(**info)
@@ -13,7 +16,8 @@ cursor=conn.cursor()
 query='CREATE DATABASE if not exists 10000CODERS_new'
 cursor.execute(query)
 #using/selecting database
-cursor.execute('use 10000coders')
+cursor.execute("use 10000coders")
+
 
 #creating a table with id,name,email,course,joined_date
 try:
@@ -26,13 +30,13 @@ except mysql.connector.errors.ProgrammingError as e :
     print(e)
 
 #insert single row of data
-def insertSingleRow(data):
-    try:
-        insertdata="""insert into students (name,email,course,joined_date) values(%s,%s,%s,%s)"""
-        cursor.execute(insertdata,data)
-        print('data inserted ')
-    except:
-        print('something went wrong')
+# def insertSingleRow(data):
+#     try:
+#         insertdata="""insert into students (name,email,course,joined_date) values(%s,%s,%s,%s)"""
+#         cursor.execute(insertdata,data)
+#         print('data inserted ')
+#     except:
+#         print('something went wrong')
 
 # insertSingleRow(('suresh','suresh@gmail.com','PFS','2025-02-06'))
 # insertSingleRow(('akhil','akhil@gmail,com','PFS','2025-06-06'))
@@ -51,39 +55,52 @@ def insertSingleRow(data):
 #             ('saranya','saranya@gmail.com','PFS','2025-05-06')])
 
 
-# def getRecords():
-#     try:
-#         query='select * from students'
-#         cursor.execute(query)
-#         results=cursor.fetchall()
-#         for row in results:
-#             print(row)        
-#     except:
-#         print('error occurred')
+
 
 # getRecords()
 
-def getStudentsByCourse(course_name):
+
+
+# getStudentsByCourse('PFS')
+
+
+# getLimitedRecords(2)
+
+def updateCourseByEmail(course,email):
     try:
-        query="""select * from students where course= %s"""
-        print(query)
-        cursor.execute(query,(course_name,))
-        results=cursor.fetchall()
-        for x in results:
-            print(x)
-        # print(results)
+        query="""update students set course = %s where email = %s"""
+        cursor.execute(query,(course,email))
+        print("data updated successfully")
     except:
-        print('something went wrong')
+        print("something went wrong")
+# updateCourseByEmail('PFS','harish@gmail.com')
 
-getStudentsByCourse('PFS')
+def updateNameAndCourseByEmail(new_name,new_course,email):
+    try:
+        query="""update students set name=%s,course=%s where email=%s"""
+        cursor.execute(query,(new_name,new_course,email))
+        print('record is updated')
+    except:
+        print("something went wrong")
+        
+# updateNameAndCourseByEmail('rishi','DS','harish@gmail.com')
 
-#updaterecordwithnewemail
-#deletesinglerecordbyemail
-#deletemultiplerecordsbycourse
+# getRecords()
 
-
-
-
+def deleteRecordById(id):
+    try:
+        query="""delete from students where id= %s"""
+        cursor.execute(query,(id,))
+        print("record deleted successfully")
+    except:
+        print("something went wrong")
+deleteRecordById(int(input('enter id')))
 conn.commit()
 cursor.close()
 conn.close()
+
+# regex--->one of the data type-->regular expressions.
+# harish@gmail.com
+#comb of uc,lc,num,sc..
+#demo sample
+
