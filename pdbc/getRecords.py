@@ -1,12 +1,12 @@
-import mysql.connector 
-from db import info
+# import mysql.connector 
+# from db import info
 
-try:
-    conn=mysql.connector.connect(**info)
-    print('connection successful')
-except:
-    print('not able to connect')
-cursor=conn.cursor()
+# try:
+#     conn=mysql.connector.connect(**info)
+#     print('connection successful')
+# except:
+#     print('not able to connect')
+# cursor=conn.cursor()
 
 def getRecords():
     try:

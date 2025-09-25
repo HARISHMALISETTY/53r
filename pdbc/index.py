@@ -20,16 +20,16 @@ cursor.execute("use 10000coders")
 
 
 #creating a table with id,name,email,course,joined_date
-try:
-    create_table="""create table if not exists students_new_1(
-    id INT AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(100),EMAIL VARCHAR(100),
-    COURSE VARCHAR(100),JOINED_DATE DATE);"""
-    cursor.execute(create_table)
-    print('table created successfully')
-except mysql.connector.errors.ProgrammingError as e :
-    print(e)
+# try:
+#     create_table="""create table if not exists students_new_1(
+#     id INT AUTO_INCREMENT PRIMARY KEY,NAME VARCHAR(100),EMAIL VARCHAR(100),
+#     COURSE VARCHAR(100),JOINED_DATE DATE);"""
+#     cursor.execute(create_table)
+#     print('table created successfully')
+# except mysql.connector.errors.ProgrammingError as e :
+#     print(e)
 
-#insert single row of data
+# #insert single row of data
 # def insertSingleRow(data):
 #     try:
 #         insertdata="""insert into students (name,email,course,joined_date) values(%s,%s,%s,%s)"""
@@ -73,7 +73,11 @@ def updateCourseByEmail(course,email):
         print("data updated successfully")
     except:
         print("something went wrong")
-# updateCourseByEmail('PFS','harish@gmail.com')
+# updateCourseByEmail('PFS','pawan@gmail.com')
+updateCourseByEmail(input('enter new course: '),input('enter email: '))
+
+
+
 
 def updateNameAndCourseByEmail(new_name,new_course,email):
     try:
@@ -83,7 +87,7 @@ def updateNameAndCourseByEmail(new_name,new_course,email):
     except:
         print("something went wrong")
         
-# updateNameAndCourseByEmail('rishi','DS','harish@gmail.com')
+updateNameAndCourseByEmail('rishi','DS','harish@gmail.com')
 
 # getRecords()
 
